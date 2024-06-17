@@ -1,0 +1,74 @@
+<!--
+ * @Author: LX2035
+ * @Date: 2024-06-17 14:52:14
+ * @LastEditors: OBKoro1
+ * @LastEditTime: 2024-06-17 14:52:37
+ * @FilePath: \love-xhh.github.io(2)\播放器.html
+ * @Description: 
+ * 
+ * Copyright (c) 2024 by LX2035, All Rights Reserved. 
+-->
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>音频播放器</title> 
+    <style> 
+        .audio-player { 
+            display: flex; 
+            align-items: center; 
+        } 
+ 
+        .audio-player button { 
+            margin: 0 5px; 
+            padding: 8px 12px; 
+            border: none; 
+            border-radius: 4px; 
+            background-color: #eee; 
+            cursor: pointer; 
+        } 
+    </style> 
+</head> 
+<body> 
+ <p>that girl</p>
+    <div class="audio-player"> 
+        <audio id="myAudio" controls> 
+            <source src="歌.mp3" type="audio/mpeg"> 
+            Your browser does not support the audio element. 
+        </audio> 
+        <button id="playBtn">播放</button> 
+        <button id="pauseBtn">暂停</button> 
+        <button id="stopBtn">停止</button> 
+    </div> 
+ <p>光辉岁月</p>
+ <div class="audio-player"> 
+    <audio id="myAudio" controls> 
+        <source src="光.mp3" type="audio/mpeg"> 
+        Your browser does not support the audio element. 
+    </audio> 
+    <button id="playBtn">播放</button> 
+    <button id="pauseBtn">暂停</button> 
+    <button id="stopBtn">停止</button>
+    <script> 
+        const audio = document.getElementById('myAudio'); 
+        const playBtn = document.getElementById('playBtn'); 
+        const pauseBtn = document.getElementById('pauseBtn'); 
+        const stopBtn = document.getElementById('stopBtn'); 
+ 
+        playBtn.addEventListener('click', () => { 
+            audio.play(); 
+        }); 
+ 
+        pauseBtn.addEventListener('click', () => { 
+            audio.pause(); 
+        }); 
+ 
+        stopBtn.addEventListener('click', () => { 
+            audio.pause(); 
+            audio.currentTime = 0; 
+        }); 
+    </script> 
+ 
+</body> 
+</html> 
