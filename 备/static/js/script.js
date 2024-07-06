@@ -51,9 +51,11 @@ function getCookie(name) {
 	return null;
 }
 
+function isMobile() {
+	let flag = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	return flag;
 
-
-
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 	var html = document.querySelector('html');
